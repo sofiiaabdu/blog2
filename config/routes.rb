@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :portfolios
-  resources :animals
   get 'pages/home'
   get 'pages/about'
   get 'pages/contact'
