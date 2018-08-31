@@ -3,11 +3,11 @@
 
 <%= link_to "Create a new portfolio", new_portfolio_path %>
 
-<% @portfolio_items.each do |potrfolio| %>
-  <p><%= potrfolio.title %></p>
-  <p><%= potrfolio.subtitle %></p>
-  <p><%= potrfolio.body %></p>
-  <%= image_tag(potrfolio.thumb_image) if potrfolio.thumb_image %>
-  <%= link_to "Edit", edit_portfolio_path(potrfolio.id) %>
+<% @portfolio_items.each do |portfolio| %>
+  <p><%= link_to portfolio.title, portfolio_path(portfolio) %></p>
+  <p><%= portfolio.subtitle %></p>
+  <p><%= portfolio.body %></p>
+  <%= image_tag(portfolio.thumb_image) if portfolio.thumb_image %>
+  <%= link_to "Edit", edit_portfolio_path(portfolio) %>
 
 <% end %>
