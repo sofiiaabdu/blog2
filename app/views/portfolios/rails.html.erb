@@ -1,0 +1,14 @@
+<h1>Angular Portfolio items</h1>
+<!--<a href="portfolios/new">Create a new portfolio</a>-->
+
+<%= link_to "Create a new portfolio", new_portfolio_path %>
+
+<% @ruby_on_rails_items.each do |portfolio| %>
+  <p><%= link_to portfolio.title, portfolio_path(portfolio) %></p>
+  <p><%= portfolio.subtitle %></p>
+  <p><%= portfolio.body %></p>
+  <%= image_tag(portfolio.thumb_image) if portfolio.thumb_image %>
+  <%= link_to "Edit", edit_portfolio_path(portfolio) %>
+  <%= link_to "Delete", portfolio, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>

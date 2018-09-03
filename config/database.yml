@@ -9,20 +9,19 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   host: localhost
-  username: tetiana
-  password: rjnfrfnzy
+  username: sofia
+  password: 1
 
 development:
   <<: *default
-  database: blog_development
-
-# Warning: The database defined as "test" will be erased and
+  database: blog_development1
+  # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: blog_test
+  database: blog_test1
 
 production:
   <<: *default
-  database: blog
+  database: blog1
