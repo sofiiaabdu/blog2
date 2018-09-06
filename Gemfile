@@ -65,3 +65,6 @@ gem 'pg'
 gem 'friendly_id', '~> 5.2.0'
 
 gem 'devise', '~> 4.5'
+
+gem 'pry'
+
